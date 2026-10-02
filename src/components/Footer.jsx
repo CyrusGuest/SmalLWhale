@@ -1,15 +1,33 @@
+import ContractAddress, { BUY_URL, EXPLORER_URL } from './ContractAddress.jsx'
+import { POOL_URL } from './Liquidity.jsx'
+
 const columns = [
   {
     title: 'Token',
-    links: ['Mechanism', 'Tokenomics', 'Distribution History', 'Contract Address'],
+    links: [
+      { label: 'Mechanism', href: '#how' },
+      { label: 'Estimator', href: '#calculator' },
+      { label: 'Buy on Jupiter', href: BUY_URL },
+      { label: 'Token on Solscan', href: EXPLORER_URL },
+    ],
   },
   {
     title: 'Verify',
-    links: ['Rewards Pool Address', 'Solana Explorer', 'Fee Collection Records', 'xStocks (TSMx)'],
+    links: [
+      { label: 'Rewards Pool Address', href: '#' },
+      { label: 'Reserve Address', href: '#reserve' },
+      { label: 'TSMx / USDC Pool (Meteora)', href: POOL_URL },
+      { label: 'xStocks (TSMx)', href: 'https://xstocks.fi' },
+    ],
   },
   {
     title: 'Legal',
-    links: ['Risk Disclosure', 'Terms of Use', 'Privacy Policy', 'Jurisdiction Notices'],
+    links: [
+      { label: 'Risk Disclosure', href: '#faq' },
+      { label: 'Terms of Use', href: '#' },
+      { label: 'Privacy Policy', href: '#' },
+      { label: 'Jurisdiction Notices', href: '#faq' },
+    ],
   },
 ]
 
@@ -24,6 +42,7 @@ export default function Footer() {
             4% fee on every trade, returned to holders as TSMC xStock every
             time the pool hits $200, split by holdings and publicly verifiable.
           </p>
+          <ContractAddress className="mt-6" />
 
           <form
             onSubmit={(e) => e.preventDefault()}
@@ -59,9 +78,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {col.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm text-mist-dim transition-colors hover:text-mist">
-                    {l}
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    target={l.href.startsWith('http') ? '_blank' : undefined}
+                    rel={l.href.startsWith('http') ? 'noreferrer' : undefined}
+                    className="text-sm text-mist-dim transition-colors hover:text-mist"
+                  >
+                    {l.label}
                   </a>
                 </li>
               ))}

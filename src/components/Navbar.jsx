@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BUY_URL } from './ContractAddress.jsx'
 
 const links = [
   { label: 'Reserve', href: '#reserve' },
+  { label: 'Liquidity', href: '#liquidity' },
   { label: 'Roadmap', href: '#future' },
   { label: 'Estimator', href: '#calculator' },
   { label: 'How It Works', href: '#how' },
@@ -34,7 +36,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#cta" className="btn-primary !px-5 !py-2.5 text-[13px]">
+          <a href={BUY_URL} target="_blank" rel="noreferrer" className="btn-primary !px-5 !py-2.5 text-[13px]">
             Buy $SEMI
           </a>
         </div>
@@ -68,7 +70,13 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <a href="#cta" onClick={() => setOpen(false)} className="btn-primary w-fit !px-5 !py-2.5 text-[13px]">
+              <a
+                href={BUY_URL}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="btn-primary w-fit !px-5 !py-2.5 text-[13px]"
+              >
                 Buy $SEMI
               </a>
             </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import ContractAddress, { BUY_URL } from './ContractAddress.jsx'
 
 // Chip mark: a rounded die with two pins per side, round caps so the pins
 // stay legible at every stroke weight the site uses
@@ -48,6 +49,12 @@ const OTHER_NOTIFS = [
     icon: 'x',
     body: '@ChipWhale: 1 SEMI = 1 share. i said what i said.',
     hl: '1 SEMI = 1 share',
+  },
+  {
+    app: 'X',
+    icon: 'x',
+    body: '@SEMIOFFICIAL: We just created and funded the first TSMx / USDC liquidity pool on Solana via Meteora. The rewards engine now has a home…',
+    hl: 'first TSMx / USDC liquidity pool on Solana',
   },
   {
     app: 'News',
@@ -977,7 +984,9 @@ function ActEnd() {
           className="mt-9 flex flex-wrap items-center justify-center gap-4"
         >
           <motion.a
-            href="#"
+            href={BUY_URL}
+            target="_blank"
+            rel="noreferrer"
             animate={{ scale: [1, 1.045, 1] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
             className="inline-flex items-center gap-2.5 rounded-full bg-azure px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-azure-bright hover:shadow-[0_0_36px_-8px_rgba(224,25,44,0.6)]"
@@ -986,6 +995,16 @@ function ActEnd() {
             Buy $SEMI
           </motion.a>
           <a href="#how" className="btn-secondary">How It Works</a>
+        </motion.div>
+      </Float>
+      <Float delay={0.9} amt={5} dur={6}>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.6, ease: EASE }}
+          className="mt-7 flex justify-center px-2"
+        >
+          <ContractAddress />
         </motion.div>
       </Float>
     </div>

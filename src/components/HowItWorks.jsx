@@ -12,8 +12,8 @@ const steps = [
     num: 'II',
     title: 'Pool',
     tag: 'fees swapped to TSMx',
-    body: 'Collected fees accumulate in a public pool and are swapped for TSMx, the tokenized TSMC share issued by xStocks on Solana. All of it belongs to holders; nothing is skimmed for marketing or the team. The pool address is published, and its balance is verifiable by anyone at any time.',
-    spec: '100% to holders · Swapped to TSMx · Public pool',
+    body: 'Collected fees accumulate in a public pool and are swapped for TSMx, the tokenized TSMC share issued by xStocks on Solana, through the TSMx / USDC liquidity pool we created and funded on Meteora. All of it belongs to holders; nothing is skimmed for marketing or the team. Both addresses are published, and every swap is verifiable by anyone at any time.',
+    spec: '100% to holders · Swapped via our Meteora pool · Public',
   },
   {
     num: 'III',

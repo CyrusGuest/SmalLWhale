@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import ContractAddress, { BUY_URL } from './ContractAddress.jsx'
 
 export default function CTA() {
   return (
@@ -24,8 +25,13 @@ export default function CTA() {
           they hold, and every payout is on the public ledger.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="#" className="btn-primary">Buy $SEMI</a>
+          <a href={BUY_URL} target="_blank" rel="noreferrer" className="btn-primary">
+            Buy $SEMI
+          </a>
           <a href="#faq" className="btn-secondary">Read the Risks</a>
+        </div>
+        <div className="mt-7 flex justify-center">
+          <ContractAddress />
         </div>
         <p className="mx-auto mt-10 max-w-lg border-t border-black/[0.08] pt-6 text-xs leading-relaxed text-mist-faint">
           SEMI is a memecoin and a speculative digital asset. Payouts vary

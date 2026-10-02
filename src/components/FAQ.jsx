@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'Where exactly does the TSMx come from?',
-    a: 'From the 4% fee charged on each completed trade of SEMI. Fees accumulate in a public pool and are swapped for TSMx, the tokenized TSMC share issued by xStocks on Solana. Every time the pool reaches $200, it is paid to holders in proportion to how much they hold. No part of any payout comes from new buyers’ principal, token emissions, or lending out pooled funds; the pool’s inflows and outflows are public Solana transactions you can audit.',
+    a: 'From the 4% fee charged on each completed trade of SEMI. Fees accumulate in a public pool and are swapped for TSMx, the tokenized TSMC share issued by xStocks on Solana, through the TSMx / USDC liquidity pool the SEMI team created and funded on Meteora, the first of its kind on Solana. Every time the pool reaches $200, it is paid to holders in proportion to how much they hold. No part of any payout comes from new buyers’ principal, token emissions, or lending out pooled funds; the pool’s inflows and outflows are public Solana transactions you can audit.',
   },
   {
     q: 'What happens when trading volume falls?',

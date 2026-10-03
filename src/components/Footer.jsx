@@ -1,4 +1,4 @@
-import { BUY_URL } from './ContractAddress.jsx'
+import ContractAddress, { BUY_URL, EXPLORER_URL } from './ContractAddress.jsx'
 import { POOL_URL } from './Liquidity.jsx'
 import XLink, { X_URL } from './Social.jsx'
 
@@ -9,6 +9,7 @@ const columns = [
       { label: 'Mechanism', href: '#how' },
       { label: 'Estimator', href: '#calculator' },
       { label: 'Buy on Jupiter', href: BUY_URL },
+      { label: 'Token on Solscan', href: EXPLORER_URL },
       { label: '@semisolcoin on X', href: X_URL },
     ],
   },
@@ -43,7 +44,8 @@ export default function Footer() {
             4% fee on every trade, returned to holders as TSMC xStock every
             time the pool hits $200, split by holdings and publicly verifiable.
           </p>
-          <div className="mt-6">
+          <ContractAddress className="mt-6" />
+          <div className="mt-4">
             <XLink label />
           </div>
 

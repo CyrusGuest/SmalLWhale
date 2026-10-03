@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import ContractAddress, { BUY_URL } from './ContractAddress.jsx'
+import { BUY_URL } from './ContractAddress.jsx'
 import { XIcon, X_URL } from './Social.jsx'
 
 export default function CTA() {
@@ -39,9 +39,6 @@ export default function CTA() {
             <XIcon className="h-[14px] w-[14px]" />
             Follow @semisolcoin
           </a>
-        </div>
-        <div className="mt-7 flex justify-center">
-          <ContractAddress />
         </div>
         <p className="mx-auto mt-10 max-w-lg border-t border-black/[0.08] pt-6 text-xs leading-relaxed text-mist-faint">
           SEMI is a memecoin and a speculative digital asset. Payouts vary

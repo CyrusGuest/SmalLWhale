@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import ContractAddress, { BUY_URL } from './ContractAddress.jsx'
+import { BUY_URL } from './ContractAddress.jsx'
 
 // Chip mark: a rounded die with two pins per side, round caps so the pins
 // stay legible at every stroke weight the site uses
@@ -995,16 +995,6 @@ function ActEnd() {
             Buy $SEMI
           </motion.a>
           <a href="#how" className="btn-secondary">How It Works</a>
-        </motion.div>
-      </Float>
-      <Float delay={0.9} amt={5} dur={6}>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6, ease: EASE }}
-          className="mt-7 flex justify-center px-2"
-        >
-          <ContractAddress />
         </motion.div>
       </Float>
     </div>

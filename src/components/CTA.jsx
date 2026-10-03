@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import ContractAddress, { BUY_URL } from './ContractAddress.jsx'
+import { XIcon, X_URL } from './Social.jsx'
 
 export default function CTA() {
   return (
@@ -29,6 +30,15 @@ export default function CTA() {
             Buy $SEMI
           </a>
           <a href="#faq" className="btn-secondary">Read the Risks</a>
+          <a
+            href={X_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-secondary inline-flex items-center gap-2.5"
+          >
+            <XIcon className="h-[14px] w-[14px]" />
+            Follow @semisolcoin
+          </a>
         </div>
         <div className="mt-7 flex justify-center">
           <ContractAddress />

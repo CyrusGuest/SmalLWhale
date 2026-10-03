@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BUY_URL } from './ContractAddress.jsx'
+import XLink from './Social.jsx'
 
 const links = [
   { label: 'Reserve', href: '#reserve' },
@@ -36,6 +37,7 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <XLink />
           <a href={BUY_URL} target="_blank" rel="noreferrer" className="btn-primary !px-5 !py-2.5 text-[13px]">
             Buy $SEMI
           </a>
@@ -70,15 +72,18 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <a
-                href={BUY_URL}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => setOpen(false)}
-                className="btn-primary w-fit !px-5 !py-2.5 text-[13px]"
-              >
-                Buy $SEMI
-              </a>
+              <div className="flex items-center gap-3">
+                <a
+                  href={BUY_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="btn-primary w-fit !px-5 !py-2.5 text-[13px]"
+                >
+                  Buy $SEMI
+                </a>
+                <XLink label />
+              </div>
             </div>
           </motion.div>
         )}

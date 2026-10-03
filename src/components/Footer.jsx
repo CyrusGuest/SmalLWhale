@@ -1,5 +1,6 @@
 import ContractAddress, { BUY_URL, EXPLORER_URL } from './ContractAddress.jsx'
 import { POOL_URL } from './Liquidity.jsx'
+import XLink, { X_URL } from './Social.jsx'
 
 const columns = [
   {
@@ -9,6 +10,7 @@ const columns = [
       { label: 'Estimator', href: '#calculator' },
       { label: 'Buy on Jupiter', href: BUY_URL },
       { label: 'Token on Solscan', href: EXPLORER_URL },
+      { label: '@semisolcoin on X', href: X_URL },
     ],
   },
   {
@@ -43,6 +45,9 @@ export default function Footer() {
             time the pool hits $200, split by holdings and publicly verifiable.
           </p>
           <ContractAddress className="mt-6" />
+          <div className="mt-4">
+            <XLink label />
+          </div>
 
           <form
             onSubmit={(e) => e.preventDefault()}
